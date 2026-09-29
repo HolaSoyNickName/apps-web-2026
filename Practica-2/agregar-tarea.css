@@ -1,0 +1,152 @@
+:root {
+    --fondo: #E5EAF5;
+    --rosa: #FF6F82;
+    --azul-claro: #8FA3ED;
+    --azul: #557EF7;
+    --azul-oscuro: #1F1E50;
+    --blanco: #FFFFFF;
+    --texto: #46464F;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'Onest', sans-serif;
+}
+
+/* CONTENIDO */
+
+.contenido {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.titulo {
+    margin: 0 0 20px 0;
+    color: var(--azul-oscuro);
+    font-family: 'Questrial', sans-serif;
+    font-size: 32px;
+}
+
+/* FORMULARIO */
+
+.tarjeta-formulario {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    padding: 24px;
+
+    box-shadow: 0 2px 8px rgba(31, 30, 80, 0.12);
+}
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--azul-oscuro);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Onest', sans-serif;
+}
+
+.form-control {
+    min-height: 56px;
+    padding: 10px 14px;
+
+    border: 2px solid var(--azul-claro);
+    border-radius: 12px;
+
+    background-color: var(--blanco);
+    color: var(--texto);
+
+    font-family: 'Onest', sans-serif;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    border-color: var(--azul);
+
+    box-shadow: 0 0 0 2px rgba(85, 126, 247, 0.20);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* BOTONES */
+
+.botones {
+    margin-top: 20px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+    min-height: 45px;
+    padding: 9px 20px;
+    border-radius: 12px;
+
+    font-family: 'Onest', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-guardar {
+    border: none;
+    background-color: var(--rosa);
+    color: var(--blanco);
+}
+
+.btn-guardar:hover {
+    background-color: #F05F74;
+    color: var(--blanco);
+}
+
+.btn-cancelar {
+    border: 2px solid var(--azul);
+    background-color: transparent;
+    color: var(--azul-oscuro);
+}
+
+.btn-cancelar:hover {
+    background-color: var(--azul-claro);
+    color: var(--azul-oscuro);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+
+    .contenido {
+        padding: 16px;
+    }
+
+    .titulo {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    .tarjeta-formulario {
+        padding: 16px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .btn-guardar,
+    .btn-cancelar {
+        width: 100%;
+    }
+}
